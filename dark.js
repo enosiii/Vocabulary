@@ -1,105 +1,66 @@
-document.addEventListener("DOMContentLoaded", function () { 
-    const menuMode = document.getElementById("menu-mode");
-    const body = document.body;
-    const menuDropdown = document.getElementById("menu-dropdown");
-    const aboutContent = document.getElementById("about-content");
-    const navigationButtons = document.querySelectorAll("#navigation button");
-    const header = document.querySelector("header");
-    const footer = document.querySelector("footer");
-    const cardContainer = $("#card-container"); // jQuery object for Slick
+body.dark-mode {
+    background-color: #1e1e1e;
+    color: #ffffff;
+}
 
-    // Detect system preference
-    const prefersDark = window.matchMedia("(prefers-color-scheme: dark)");
+header.dark-mode {
+    background-color: #005000;
+}
 
-    // Check for saved mode in local storage, else use system preference
-    if (localStorage.getItem("darkMode") === "enabled" || 
-        (!localStorage.getItem("darkMode") && prefersDark.matches)) {
-        enableDarkMode();
-    }
+#menu-dropdown.dark-mode {
+    background: #333;
+    color: white;
+    border: 1px solid #555;
+}
 
-    // Listen for system preference changes
-    prefersDark.addEventListener("change", (e) => {
-        if (!localStorage.getItem("darkMode")) { // Only auto-change if user hasn't manually set a preference
-            e.matches ? enableDarkMode() : disableDarkMode();
-        }
-    });
+#menu-dropdown.dark-mode ul li {
+    color: white;
+}
 
-    // Toggle dark mode manually
-    menuMode.addEventListener("click", function () {
-        console.log("Dark mode button clicked!");
-        if (body.classList.contains("dark-mode")) {
-            localStorage.setItem("darkMode", "disabled");
-            disableDarkMode();
-        } else {
-            localStorage.setItem("darkMode", "enabled");
-            enableDarkMode();
-        }
-    });
+#menu-dropdown.dark-mode ul li a {
+    color: white;
+}
 
-    function enableDarkMode() {
-        body.classList.add("dark-mode");
-        menuDropdown.classList.add("dark-mode");
-        aboutContent.classList.add("dark-mode");
-        header.classList.add("dark-mode");
-        footer.classList.add("dark-mode");
-        navigationButtons.forEach(btn => btn.classList.add("dark-mode"));
+#about-content.dark-mode {
+    padding: 10px;
+    font-size: 14px;
+    color: rgb(255, 255, 255);
+}
 
-        applyDarkModeToCards();
-        refreshSlick();
-
-        menuMode.innerHTML = '<i class="fa-solid fa-sun"></i> Light Mode';
-    }
-
-    function disableDarkMode() {
-        body.classList.remove("dark-mode");
-        menuDropdown.classList.remove("dark-mode");
-        aboutContent.classList.remove("dark-mode");
-        header.classList.remove("dark-mode");
-        footer.classList.remove("dark-mode");
-        navigationButtons.forEach(btn => btn.classList.remove("dark-mode"));
-
-        removeDarkModeFromCards();
-        refreshSlick();
-
-        menuMode.innerHTML = '<i class="fa-solid fa-moon"></i> Dark Mode';
-    }
-
-    function applyDarkModeToCards() {
-        document.querySelectorAll(".card").forEach(card => {
-            card.classList.add("dark-mode");
-        });
-    }
-
-    function removeDarkModeFromCards() {
-        document.querySelectorAll(".card").forEach(card => {
-            card.classList.remove("dark-mode");
-        });
-    }
-
-    /*
-    function refreshSlick() {
-        // Reinitialize Slick after changing card styles
-        setTimeout(() => {
-            cardContainer.slick("setPosition"); // Fix position
-        }, 100);
-    } */
-
-    function refreshSlick() {
-    if (cardContainer.hasClass("slick-initialized")) {
-        setTimeout(() => {
-            cardContainer.slick("setPosition"); // Fix position
-        }, 100);
-    }
+/* Smooth Transition */
+.card {
+    will-change: background-color, color, box-shadow;
+    transition: background-color 0.4s ease, color 0.4s ease;
 }
 
 
-    // Observe dynamically added cards
-    const observer = new MutationObserver(() => {
-        if (localStorage.getItem("darkMode") === "enabled") {
-            applyDarkModeToCards();
-        }
-        refreshSlick();
-    });
+.card.dark-mode {
+    background-color: #1e1e1e;
+    color: #ffffff;
+    border: 1px solid #444;
+    box-shadow: 0 4px 8px rgba(255, 255, 255, 0.2);
+}
 
-    observer.observe(document.getElementById("card-container"), { childList: true });
-});
+
+.card.dark-mode {
+    background: #2c2c2c;
+    color: white;
+    border: 1px solid #444;
+}
+
+footer.dark-mode {
+    background-color: #005000;
+    min-height: 50px;
+}
+
+#navigation button.dark-mode {
+    background-color: #007500;
+}
+
+#navigation button.dark-mode:hover {
+    background-color: #005000;
+}
+
+body.dark-mode ul.share-buttons li a {
+    color: white; /* White text in dark mode */
+}
