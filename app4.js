@@ -4,6 +4,7 @@ document.addEventListener("DOMContentLoaded", function () {
     const aboutMenu = document.getElementById("menu-about");
     const aboutContent = document.getElementById("about-content");
     const cardContainer = $("#card-container");
+    const menuContainer = document.getElementById("menu-container");
     const overlay = document.getElementById("overlay");
     
     /*
