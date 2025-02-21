@@ -172,3 +172,8 @@ ul.share-buttons{
     width: 1px;
     overflow: hidden;
   }
+
+  ul.share-buttons li a {
+    text-decoration: none; /* Removes underline */
+    border: none; /* Ensures no extra border */
+}
