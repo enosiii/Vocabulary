@@ -26,6 +26,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
     // Toggle dark mode manually
     menuMode.addEventListener("click", function () {
+        console.log("Dark mode button clicked!");
         if (body.classList.contains("dark-mode")) {
             localStorage.setItem("darkMode", "disabled");
             disableDarkMode();
