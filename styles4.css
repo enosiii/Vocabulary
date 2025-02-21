@@ -38,7 +38,7 @@ header {
     background: none;
     border: none;
     color: white;
-    font-size: 24px;
+    font-size: 2rem;
     cursor: pointer;
 }
 
@@ -88,7 +88,7 @@ header {
 
 #about-content {
     padding: 10px;
-    font-size: 14px;
+    font-size: 0.8rem;
     color: black;
 }
 
