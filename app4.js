@@ -82,7 +82,7 @@ document.addEventListener("DOMContentLoaded", function () {
     cardContainer.empty();
 
     paragraphs.forEach(paragraph => {
-        cardContainer.append(`<div class="card"><h2>${paragraph.title}</h2><p>${paragraph.content}</p></div>`);
+        cardContainer.append(`<div class="card"><h2>${paragraph.title}</h2><p class="lcp-text">${paragraph.content}</p></div>`);
     });
 
     if (cardContainer.hasClass("slick-initialized")) {
