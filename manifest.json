@@ -18,5 +18,23 @@
         "sizes": "512x512",
         "type": "image/png"
       }
-    ]
+    ],
+    "screenshots": [
+    {
+      "src": "/Vocabulary/assets/screen1.png",
+      "sizes": "720x1430",
+      "type": "image/png"
+    },
+    {
+      "src": "/Vocabulary/assets/screen2.png",
+      "sizes": "720x1430",
+      "type": "image/png"
+    },
+    {
+      "src": "/Vocabulary/assets/screen3.png",
+      "sizes": "720x1430",
+      "type": "image/png"
+    }
+  ],
+  "lang": "en"
   }
