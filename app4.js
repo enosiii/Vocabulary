@@ -68,6 +68,7 @@ document.addEventListener("DOMContentLoaded", function () {
             renderCards(paragraphs);
         });
 
+    /*
     function renderCards(paragraphs) {
         cardContainer.empty();
         paragraphs.forEach(paragraph => {
@@ -75,7 +76,29 @@ document.addEventListener("DOMContentLoaded", function () {
         });
 
         cardContainer.slick({ slidesToShow: 1, slidesToScroll: 1, arrows: true, prevArrow: $("#prev-btn"), nextArrow: $("#next-btn"), speed: 600 });
+    }*/
+
+    function renderCards(paragraphs) {
+    cardContainer.empty();
+
+    paragraphs.forEach(paragraph => {
+        cardContainer.append(`<div class="card"><h2>${paragraph.title}</h2><p>${paragraph.content}</p></div>`);
+    });
+
+    if (cardContainer.hasClass("slick-initialized")) {
+        cardContainer.slick("unslick"); // Destroy previous instance
     }
+
+    cardContainer.slick({
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        arrows: true,
+        prevArrow: $("#prev-btn"),
+        nextArrow: $("#next-btn"),
+        speed: 600
+    });
+}
+
 
     function shuffleArray(array) {
         return array.sort(() => Math.random() - 0.5);
