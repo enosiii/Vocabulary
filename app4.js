@@ -69,7 +69,7 @@ document.addEventListener("DOMContentLoaded", function () {
             renderCards(paragraphs);
         });
 
-    
+    /*
     function renderCards(paragraphs) {
         cardContainer.empty();
         paragraphs.forEach(paragraph => {
@@ -78,7 +78,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
         cardContainer.slick({ slidesToShow: 1, slidesToScroll: 1, arrows: true, prevArrow: $("#prev-btn"), nextArrow: $("#next-btn"), speed: 600 });
     }
-/*
+*/
     function renderCards(paragraphs) {
     cardContainer.empty();
 
@@ -98,7 +98,7 @@ document.addEventListener("DOMContentLoaded", function () {
         nextArrow: $("#next-btn"),
         speed: 600
     });
-}*/
+}
 
 
     function shuffleArray(array) {
