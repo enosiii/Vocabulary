@@ -50,6 +50,7 @@ header.dark-mode {
 
 footer.dark-mode {
     background-color: #005000;
+    min-height: 50px;
 }
 
 #navigation button.dark-mode {
