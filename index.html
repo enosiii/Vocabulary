@@ -11,6 +11,10 @@
   <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css"/>
   <script src="https://kit.fontawesome.com/effcbc0526.js" crossorigin="anonymous"></script>
   <link rel="manifest" href="/Vocabulary/manifest.json">
+  
+  <link rel="stylesheet" href="/Vocabulary/dark.css">
+  <script src="/Vocabulary/dark.js" defer></script>
+  
   <script>
     if ('serviceWorker' in navigator) {
       navigator.serviceWorker.register('/Vocabulary/service-worker.js', { scope: '/Vocabulary/' })
@@ -19,6 +23,7 @@
     }
   </script>
 </head>
+  
 <body>
 
   <!-- Overlay -->
@@ -31,7 +36,7 @@
     <div id="menu-dropdown">
       <ul>
         <li id="menu-selection">Settings</li>
-        <li id="menu-mode"><i class="fa-solid fa-circle-half-stroke"></i> Dark Mode</li>
+        <li id="menu-mode"><i class="fa-solid fa-moon"></i> Dark Mode</li>
         <li id="menu-install" style="display: none;"><i class="fa-solid fa-download"></i> Install</li>
         <hr>
         <li><a href="mailto:enosrigortan@gmail.com"><i class="fa-solid fa-envelope"></i> Feedback</a></li>
