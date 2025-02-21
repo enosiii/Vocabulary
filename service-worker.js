@@ -2,8 +2,9 @@ const CACHE_NAME = 'vocab-app-v1';
 const urlsToCache = [
   '/',
   '/index.html',
-  '/styles.css',
-  '/app.js',
+  '/styles4.css',
+  '/app4.js',
+  '/install.js',
   '/manifest.json',
   '/paragraphs.json',
   '/assets/icon-512.png',
