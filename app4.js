@@ -1,10 +1,10 @@
 document.addEventListener("DOMContentLoaded", function () {
     const menuBtn = document.getElementById("menu-btn");
+    const menuContainer = document.getElementById("menu-container");
     const menuDropdown = document.getElementById("menu-dropdown");
     const aboutMenu = document.getElementById("menu-about");
     const aboutContent = document.getElementById("about-content");
     const cardContainer = $("#card-container");
-    const menuContainer = document.getElementById("menu-container");
     const overlay = document.getElementById("overlay");
     
     /*
@@ -69,7 +69,7 @@ document.addEventListener("DOMContentLoaded", function () {
             renderCards(paragraphs);
         });
 
-    
+    /*
     function renderCards(paragraphs) {
         cardContainer.empty();
         paragraphs.forEach(paragraph => {
@@ -77,8 +77,8 @@ document.addEventListener("DOMContentLoaded", function () {
         });
 
         cardContainer.slick({ slidesToShow: 1, slidesToScroll: 1, arrows: true, prevArrow: $("#prev-btn"), nextArrow: $("#next-btn"), speed: 600 });
-    }
-/*
+    }*/
+
     function renderCards(paragraphs) {
     cardContainer.empty();
 
@@ -88,7 +88,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
     if (cardContainer.hasClass("slick-initialized")) {
         cardContainer.slick("unslick"); // Destroy previous instance
-    }*/
+    }
 
     cardContainer.slick({
         slidesToShow: 1,
