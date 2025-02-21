@@ -4,16 +4,31 @@ document.addEventListener("DOMContentLoaded", function () {
     const aboutMenu = document.getElementById("menu-about");
     const aboutContent = document.getElementById("about-content");
     const cardContainer = $("#card-container");
+    const overlay = document.getElementById("overlay");
+    
+    /*
+        // Toggle menu
+        menuBtn.addEventListener("click", function () {
+            menuDropdown.style.display = menuDropdown.style.display === "block" ? "none" : "block";
+        });
+    */
 
-    // Toggle menu
+
+    // Toggle menu with overlay
     menuBtn.addEventListener("click", function () {
-        menuDropdown.style.display = menuDropdown.style.display === "block" ? "none" : "block";
+        const isVisible = menuDropdown.style.display === "block";
+        menuDropdown.style.display = isVisible ? "none" : "block";
+        overlay.style.display = isVisible ? "none" : "block";
     });
 
-    /* Toggle About section
-    aboutMenu.addEventListener("click", function () {
-        aboutContent.classList.toggle("hidden");
-    }); */
+    // Close menu when clicking outside
+    document.addEventListener("click", function (event) {
+        if (!menuBtn.contains(event.target) && !menuDropdown.contains(event.target)) {
+            menuDropdown.style.display = "none";
+            overlay.style.display = "none";
+        }
+    });
+    
 
     // Toggle About section
     aboutMenu.addEventListener("click", function () {
