@@ -3,14 +3,21 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="icon" href="assets/icon-512.png">
+  <link rel="icon" href="/Vocabulary/assets/icon-512.png">
   <title>Vocabulary Enhancer</title>
-  <link rel="stylesheet" href="styles4.css">
-  <link rel="manifest" href="manifest.json">
+  <link rel="stylesheet" href="/Vocabulary/styles4.css">
   <meta name="theme-color" content="#4CAF50">
   <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css"/>
   <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css"/>
   <script src="https://kit.fontawesome.com/effcbc0526.js" crossorigin="anonymous"></script>
+  <link rel="manifest" href="/Vocabulary/manifest.json">
+  <script>
+    if ('serviceWorker' in navigator) {
+      navigator.serviceWorker.register('/Vocabulary/service-worker.js', { scope: '/Vocabulary/' })
+        .then(() => console.log('Service Worker Registered'))
+        .catch(err => console.log('Service Worker Registration Failed: ', err));
+    }
+  </script>
 </head>
 <body>
 
@@ -122,13 +129,6 @@
 
   </footer>
     
-  <script>
-    if ('serviceWorker' in navigator) {
-      navigator.serviceWorker.register('/Vocabulary/service-worker.js')
-        .then(() => console.log('Service Worker Registered'))
-        .catch(err => console.log('Service Worker Registration Failed: ', err));
-    }
-  </script>
   <script src="app4.js"></script>
   <script src="install.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
