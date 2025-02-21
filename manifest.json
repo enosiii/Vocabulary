@@ -43,5 +43,9 @@
   "launch_handler": {
     "client_mode": "navigate-new"
   },
-  "lang": "en"
+  "lang": "en",
+  "handle_links": "preferred",
+  "edge_side_panel": {
+    "preferred_width": 600
+  }
 }
