@@ -75,12 +75,22 @@ document.addEventListener("DOMContentLoaded", function () {
         });
     }
 
+    /*
     function refreshSlick() {
         // Reinitialize Slick after changing card styles
         setTimeout(() => {
             cardContainer.slick("setPosition"); // Fix position
         }, 100);
-    } 
+    } */
+
+    function refreshSlick() {
+    if (cardContainer.hasClass("slick-initialized")) {
+        setTimeout(() => {
+            cardContainer.slick("setPosition"); // Fix position
+        }, 100);
+    }
+}
+
 
     // Observe dynamically added cards
     const observer = new MutationObserver(() => {
