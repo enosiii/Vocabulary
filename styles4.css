@@ -87,7 +87,7 @@ main {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    min-height: 80vh;
+    min-height: 60vh;
 }
 
 /* Card Slider */
