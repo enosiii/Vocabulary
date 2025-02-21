@@ -188,4 +188,6 @@ ul.share-buttons{
   ul.share-buttons li a {
     text-decoration: none; /* Removes underline */
     border: none; /* Ensures no extra border */
+    font-size: 1.75rem;
+    color: black;
 }
