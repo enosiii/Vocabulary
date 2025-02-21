@@ -4,7 +4,7 @@
     "description": "A web app to enhance your vocabulary and English communication skills.",
     "start_url": "/Vocabulary/index.html",
     "scope": "/Vocabulary/",
-    "display": "fullscreen",
+    "display": "standalone",
     "background_color": "#4CAF50",
     "theme_color": "#4CAF50",
     "icons": [
