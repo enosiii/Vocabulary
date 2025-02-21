@@ -2,8 +2,8 @@
     "name": "Vocabulary Enhancer",
     "short_name": "English Vocabulary",
     "description": "A web app to enhance your vocabulary and English communication skills.",
-    "start_url": "/",
-    "display": "standalone",
+    "start_url": "/Vocabulary/index.html",
+    "display": "fullscreen",
     "background_color": "#4CAF50",
     "theme_color": "#4CAF50",
     "icons": [
