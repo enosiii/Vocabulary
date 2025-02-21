@@ -1,4 +1,4 @@
-const CACHE_NAME = 'vocab-app-v1';
+const CACHE_NAME = 'vocabulary-v1';
 const urlsToCache = [
   '/Vocabulary/',  // Adjusted for GitHub Pages
   '/Vocabulary/index.html',
