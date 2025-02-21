@@ -60,3 +60,7 @@ footer.dark-mode {
 #navigation button.dark-mode:hover {
     background-color: #005000;
 }
+
+body.dark-mode ul.share-buttons li a {
+    color: white; /* White text in dark mode */
+}
