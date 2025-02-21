@@ -1,16 +1,17 @@
 const CACHE_NAME = 'vocab-app-v1';
 const urlsToCache = [
-  '/',
-  '/index.html',
-  '/styles4.css',
-  '/app4.js',
-  '/install.js',
-  '/manifest.json',
-  '/paragraphs.json',
-  '/assets/icon-512.png',
-  '/assets/icon-192.png',
-  '/assets/icon.png'
+  '/Vocabulary/',  // Adjusted for GitHub Pages
+  '/Vocabulary/index.html',
+  '/Vocabulary/styles4.css',
+  '/Vocabulary/app4.js',
+  '/Vocabulary/install.js',
+  '/Vocabulary/manifest.json',
+  '/Vocabulary/paragraphs.json',
+  '/Vocabulary/assets/icon-512.png',
+  '/Vocabulary/assets/icon-192.png',
+  '/Vocabulary/assets/icon.png'
 ];
+
 
 
 
